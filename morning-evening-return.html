@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Morning & Evening Return — Soul Growth Circle</title>
+<meta name="description" content="28 days of daily practice prompts. Morning intention. Evening reflection. A daily return to yourself. Soul Growth Circle — April 2026.">
+<meta property="og:title" content="The Morning & Evening Return — Soul Growth Circle">
+<meta property="og:description" content="28 days of daily practice prompts from Tina Shafer. Morning intention. Evening reflection. Seat. Feet. Ground. Return.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Soul Growth Studio · Tina Shafer">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink: #1a1410;
+  --ink-soft: #2e2620;
+  --ink-muted: #6b5f52;
+  --parchment: #f8f3ea;
+  --parchment-warm: #f0e8d8;
+  --parchment-dark: #ddd0bb;
+  --slate: #6b7d8c;
+  --slate-pale: #e4ecf0;
+  --gold: #c9a84c;
+  --gold-deep: #a8832a;
+  --gold-pale: #f7f0dc;
+  --gold-rich: #d4a843;
+  --dojo: #5a7080;
+  --dojo-pale: #dce8ee;
+  --morning: #e8b86d;
+  --evening: #7a8c9e;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: var(--parchment);
+  color: var(--ink);
+  min-height: 100vh;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.top-bar {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #6b7d8c 0%, #c9a84c 35%, #d4a843 60%, #6b7d8c 100%);
+}
+
+.header {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 32px 0;
+  text-align: center;
+}
+
+.star-wrap {
+  margin-bottom: 16px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: 12px;
+}
+
+.main-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.main-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.sub-title {
+  font-size: 14px;
+  color: var(--ink-muted);
+  margin-bottom: 28px;
+  letter-spacing: 0.05em;
+}
+
+.seat-feet {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--ink-muted);
+  margin-bottom: 32px;
+}
+
+/* LAYER TOGGLE */
+.dojo-toggle-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 36px;
+  padding: 16px 24px;
+  background: white;
+  border: 1px solid var(--parchment-dark);
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 36px;
+}
+
+.dojo-label {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+.dojo-label.active { color: var(--dojo); font-weight: 500; }
+
+.toggle-track {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background: var(--parchment-dark);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  flex-shrink: 0;
+}
+
+.toggle-track.on { background: var(--dojo); }
+
+.toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.toggle-track.on .toggle-thumb { transform: translateX(20px); }
+
+/* WEEK NAV */
+.week-nav {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.week-pill {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border: 1px solid var(--parchment-dark);
+  background: white;
+  cursor: pointer;
+  color: var(--ink-muted);
+  transition: all 0.2s ease;
+}
+
+.week-pill:hover { border-color: var(--gold); color: var(--ink); }
+.week-pill.active { background: var(--gold); border-color: var(--gold); color: white; }
+
+/* DAY NAVIGATION */
+.day-nav {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.day-arrow {
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: 1px solid var(--parchment-dark);
+  background: white;
+  cursor: pointer;
+  color: var(--ink-muted);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.day-arrow:hover:not(:disabled) { border-color: var(--gold); color: var(--ink); }
+.day-arrow:disabled { opacity: 0.3; cursor: not-allowed; }
+
+.day-indicator {
+  text-align: center;
+  flex: 1;
+}
+
+.day-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.day-week-label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 4px;
+}
+
+/* DAY CARD */
+.day-card {
+  max-width: 680px;
+  margin: 0 auto 48px;
+  padding: 0 32px;
+}
+
+.prompt-block {
+  background: white;
+  border: 1px solid var(--parchment-dark);
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.prompt-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--parchment-dark);
+}
+
+.prompt-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.prompt-dot.morning { background: var(--morning); }
+.prompt-dot.evening { background: var(--evening); }
+.prompt-dot.dojo { background: var(--dojo); }
+
+.prompt-type {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.prompt-type.morning { color: var(--morning); }
+.prompt-type.evening { color: var(--evening); }
+.prompt-type.dojo { color: var(--dojo); }
+
+.prompt-body {
+  padding: 24px;
+}
+
+.prompt-question {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--ink);
+  margin-bottom: 0;
+}
+
+.dojo-block {
+  background: var(--dojo-pale);
+  border: 1px solid #b8cdd8;
+}
+
+.dojo-block .prompt-header {
+  border-bottom-color: #b8cdd8;
+}
+
+.dojo-text {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+
+/* CHECK-IN */
+.checkin-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.checkin-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 1px solid var(--parchment-dark);
+  background: white;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--ink-muted);
+  letter-spacing: 0.05em;
+  transition: all 0.25s ease;
+}
+
+.checkin-btn:hover { border-color: var(--gold); color: var(--ink); }
+
+.checkin-btn.done {
+  background: var(--gold-pale);
+  border-color: var(--gold);
+  color: var(--gold-deep);
+}
+
+.check-mark {
+  width: 14px;
+  height: 14px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 8px;
+}
+
+.checkin-btn.done .check-mark::after {
+  content: '✓';
+}
+
+/* WEEK THEME */
+.week-theme {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 32px 20px;
+  text-align: center;
+}
+
+.week-theme-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--ink-muted);
+}
+
+.week-theme-sub {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--parchment-dark);
+  margin-top: 4px;
+}
+
+/* ALL DAYS VIEW */
+.all-days {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 32px 48px;
+  display: none;
+}
+
+.all-days.visible { display: block; }
+
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.day-dot {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid var(--parchment-dark);
+  background: white;
+  cursor: pointer;
+  color: var(--ink-muted);
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.day-dot:hover { border-color: var(--gold); color: var(--ink); }
+.day-dot.today { border-color: var(--gold); background: var(--gold-pale); color: var(--gold-deep); font-weight: 500; }
+.day-dot.completed { background: var(--gold); border-color: var(--gold); color: white; }
+
+/* DIVIDER */
+.section-divider {
+  max-width: 680px;
+  margin: 0 auto 24px;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.divider-line { flex: 1; height: 1px; background: var(--parchment-dark); }
+.divider-star { color: var(--gold); font-size: 12px; }
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 28px 32px;
+  border-top: 1px solid var(--parchment-dark);
+  font-size: 12px;
+  color: var(--ink-muted);
+  letter-spacing: 0.05em;
+}
+
+footer a { color: var(--ink-muted); }
+
+@media (max-width: 480px) {
+  .header { padding: 36px 20px 0; }
+  .day-card, .day-nav, .week-nav, .week-theme { padding-left: 20px; padding-right: 20px; }
+  .day-grid { grid-template-columns: repeat(7, 1fr); gap: 5px; }
+  .day-dot { font-size: 11px; }
+  .checkin-row { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<div class="header">
+  <div class="star-wrap">
+    <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+      <path d="M24 2 L25.8 18 L38 8 L27.6 20 L44 20 L27.6 26 L38 40 L25.8 30 L24 46 L22.2 30 L10 40 L20.4 26 L4 20 L20.4 20 L10 8 L22.2 18 Z" fill="#c9a84c" opacity="0.9"/>
+    </svg>
+  </div>
+  <div class="eyebrow">Soul Growth Circle · Tina Shafer</div>
+  <h1 class="main-title">The Morning & <em>Evening</em> Return</h1>
+  <div class="sub-title">28 Days of Daily Practice Prompts</div>
+  <div class="seat-feet">"Seat. Feet. Ground. Return." 🔔</div>
+
+  <div class="dojo-toggle-wrap">
+    <span class="dojo-label" id="free-label">Prompts Only</span>
+    <div class="toggle-track" id="dojo-toggle" onclick="toggleDojo()">
+      <div class="toggle-thumb"></div>
+    </div>
+    <span class="dojo-label" id="dojo-label">The Somatic Layer</span>
+  </div>
+</div>
+
+<div class="week-nav" id="week-nav">
+  <div class="week-pill active" onclick="jumpToWeek(1)">Week 1</div>
+  <div class="week-pill" onclick="jumpToWeek(2)">Week 2</div>
+  <div class="week-pill" onclick="jumpToWeek(3)">Week 3</div>
+  <div class="week-pill" onclick="jumpToWeek(4)">Week 4</div>
+</div>
+
+<div class="week-theme" id="week-theme-display"></div>
+
+<div class="day-nav">
+  <button class="day-arrow" id="prev-btn" onclick="changeDay(-1)">← Prev</button>
+  <div class="day-indicator">
+    <div class="day-number" id="day-number">Day 1</div>
+    <div class="day-week-label" id="day-week-label">Week 1 · Arriving</div>
+  </div>
+  <button class="day-arrow" id="next-btn" onclick="changeDay(1)">Next →</button>
+</div>
+
+<div class="day-card" id="day-card"></div>
+
+<div class="section-divider">
+  <div class="divider-line"></div>
+  <div class="divider-star">✦</div>
+  <div class="divider-line"></div>
+</div>
+
+<div class="all-days visible">
+  <div class="day-grid" id="day-grid"></div>
+</div>
+
+<footer>
+  Soul Growth Circle · Tina Shafer ·
+  <a href="https://skool.com/bodydialoguemethod/about">Join the community — free</a>
+  <br><br>
+  <em style="font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;">The return itself is the change. 🕯️</em>
+  <br><br>
+  <button onclick="resetProgress()" style="font-family:'Jost',sans-serif;font-size:11px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-muted);background:transparent;border:none;cursor:pointer;text-decoration:underline;text-underline-offset:3px;margin-top:8px;">Reset my progress — start fresh</button>
+  <div style="margin-top:1.5rem; font-family:'Jost',sans-serif; font-size:10px; letter-spacing:0.1em; color:#9a8e7e;">
+    <a href="https://tinalshafer.com/privacy-policy/" style="color:#9a8e7e; text-decoration:none;" target="_blank">Privacy Policy</a>
+    &nbsp;·&nbsp;
+    <a href="https://tinalshafer.com/disclaimer/" style="color:#9a8e7e; text-decoration:none;" target="_blank">Disclaimer</a>
+    &nbsp;·&nbsp;
+    <a href="https://tinalshafer.com/terms-conditions/" style="color:#9a8e7e; text-decoration:none;" target="_blank">Terms &amp; Conditions</a>
+  </div>
+</footer>
+
+<script>
+const weeks = [
+  { title: "Arriving", sub: "Days 1–7: Coming back to yourself" },
+  { title: "Listening", sub: "Days 8–14: What your body already knows" },
+  { title: "Translating", sub: "Days 15–21: From pressure into presence" },
+  { title: "Returning", sub: "Days 22–28: Making this yours" }
+];
+
+const days = [
+  { morning: "What is one word I want to carry into today?", evening: "Where did I feel most like myself today?", dojo: "As you sit with your morning word, notice where in your body it lives. Chest? Belly? Shoulders? Just observe. No need to explain it." },
+  { morning: "What does my body need from me today before anything else?", evening: "What am I genuinely grateful for right now — something I can feel, not just name?", dojo: "In your evening practice, place one hand on your chest. Let the gratitude land there first before it becomes a thought." },
+  { morning: "What am I bringing into today that I could actually set down?", evening: "What moment today asked me to slow down?", dojo: "Notice if your morning intention shifted during the day. Not as judgment — just as information. Your body was translating something." },
+  { morning: "What would it feel like to move through today without hurrying?", evening: "Where did I show up for myself today, even in a small way?", dojo: "Sit with the evening question for a full breath before answering. Let the answer come from somewhere quieter than your mind." },
+  { morning: "What quality do I want to lead with today?", evening: "What did my body carry today that I am ready to release?", dojo: "With your morning quality in mind — compassion, steadiness, ease, whatever it is — ask: where in my body does that quality live when I feel it most?" },
+  { morning: "What does returning to myself feel like right now, in this moment?", evening: "What surprised me today about my own resilience?", dojo: "This is a practice of remembering, not learning. Ask your body: what do I already know about how to feel steady? Let it answer." },
+  { morning: "What is true for me today that I want to honor?", evening: "As I close this first week — what has shifted, even quietly?", dojo: "End of week one. Sit a little longer tonight. No question needed. Just arrive and let the week settle in your body without reviewing it." },
+  { morning: "What is my nervous system telling me this morning before my mind gets involved?", evening: "Where did I feel safe today?", dojo: "Begin to notice the difference between a thought and a body signal. This week we practice telling them apart. No analysis needed — just curiosity." },
+  { morning: "What am I resisting this morning, and what might that resistance be protecting?", evening: "What did I do today that came from a true place rather than pressure?", dojo: "Your resistance is not the enemy. It is information. Ask it: what are you trying to keep safe? You don't need an answer — just ask." },
+  { morning: "If my body could speak one sentence this morning, what would it say?", evening: "What am I grateful for that I almost missed today?", dojo: "Practice listening to your body like it is a trusted friend who speaks quietly. It won't shout. Settle enough that you can hear it." },
+  { morning: "Where am I holding tension right now that I haven't acknowledged?", evening: "What felt easeful today, even briefly?", dojo: "Tension is the body's way of holding what the mind hasn't processed yet. You don't need to fix it. Just acknowledge it today. That's enough." },
+  { morning: "What does my wisest self want me to remember today?", evening: "What am I most grateful for about my own body today?", dojo: "Ask the question about your wisest self and then wait. Not in your head. Drop into your chest. The answer that comes from there is worth trusting." },
+  { morning: "What would it feel like to trust myself completely today?", evening: "Where did I move from wisdom instead of worry today?", dojo: "This week you've been practicing listening. Tonight, ask: what has my body been trying to tell me this week that I'm finally ready to hear?" },
+  { morning: "What do I already know that I keep forgetting?", evening: "As I close week two — what does my body want me to carry forward?", dojo: "Two weeks in. The practice is building something in your nervous system that you may not be able to articulate yet. Trust that. The return itself is the change." },
+  { morning: "What story am I telling myself this morning — and is it actually true?", evening: "What moment today asked me to be more present than I expected?", dojo: "We don't manage stress — we translate it. This week we begin that practice. Notice the story your mind is running. Ask your body: is this real right now, or is this a memory?" },
+  { morning: "What am I carrying from yesterday that belongs to yesterday?", evening: "What did I let go of today, even a little?", dojo: "The nervous system does not always know the difference between then and now. Help it orient. Look around the room you are in. You are here. You are safe. Today is today." },
+  { morning: "What would ease look like in my body today?", evening: "Where did I choose presence over performance today?", dojo: "Ease is not the absence of difficulty. It is a quality in the body even when things are hard. Ask: where in my body do I feel even a small amount of ease right now?" },
+  { morning: "What am I doing out of fear today — and what would I do differently from trust?", evening: "What is one thing I did today that I am genuinely proud of?", dojo: "Fear and trust feel different in the body. Fear tends to tighten. Trust tends to soften. Notice which one is running your morning. No judgment — just awareness." },
+  { morning: "What does it feel like when I am fully here?", evening: "What am I grateful for that exists because of who I am, not what I did?", dojo: "Full presence has a felt quality. It is not a thought about being present — it is a body state. Practice finding it for even ten seconds this morning. That is enough." },
+  { morning: "What would today look like if I led from my body instead of my to-do list?", evening: "What did my body teach me today?", dojo: "This is the week you begin to feel the difference between reacting and responding. Reaction comes fast from the nervous system. Response comes after a breath. Practice the breath today." },
+  { morning: "What is the most honest thing I can say about how I am right now?", evening: "Three weeks in — what is the most honest thing I can say about what this practice is giving me?", dojo: "Three weeks. You have been returning to yourself every morning and every evening. Ask tonight: what is different in my body now compared to when we started? Not in your head. In your body." },
+  { morning: "What does my life feel like when I am living it from the inside out?", evening: "Where did I feel most grounded today?", dojo: "This final week is about integration. The practice is no longer something you are trying. It is something you are doing. Notice the difference in how it feels." },
+  { morning: "What do I want to stop waiting to feel ready for?", evening: "What am I grateful for that I would not have noticed a month ago?", dojo: "Readiness is often a feeling we wait for instead of create. Ask your body: am I actually ready, and just afraid? Or am I genuinely not ready? It knows the difference." },
+  { morning: "What do I most want to remember about who I am today?", evening: "What did I do today that came from the truest part of me?", dojo: "You are building calm literacy — the ability to read your own nervous system. Ask this morning: what is my baseline today? Not good or bad. Just what is." },
+  { morning: "What would it mean to fully trust my own inner wisdom?", evening: "Where did I return to myself today after being pulled away?", dojo: "The return after being pulled away is the whole practice. It is not about staying present — it is about coming back. How quickly did you return today? That speed is the skill." },
+  { morning: "What has this month of practice changed in the way I start my days?", evening: "What has this month of practice changed in the way I close my days?", dojo: "Beginning to close the loop. Your nervous system has been building something over these four weeks. Ask tonight: where do I feel that most in my body?" },
+  { morning: "What do I want to carry forward from this practice into the rest of this year?", evening: "What am I most grateful for about showing up for myself this month?", dojo: "This is not the end of the practice — it is the beginning of the practice being yours. Ask: what does it feel like to know I can return to myself? Let that feeling be real." },
+  { morning: "What does returning to myself feel like now — compared to day one?", evening: "The door is open. What do I most want to walk through next?", dojo: "You made it. Twenty-eight days. Morning and evening. Again and again. Tonight, sit a little longer. No questions needed. Just be here. Your body already knows the way." }
+];
+
+let currentDay = 1;
+let isDojoMode = false;
+const checkins = JSON.parse(localStorage.getItem('mer_checkins') || '{}');
+
+function getWeekIndex(day) { return Math.floor((day - 1) / 7); }
+
+function toggleDojo() {
+  isDojoMode = !isDojoMode;
+  const track = document.getElementById('dojo-toggle');
+  track.classList.toggle('on', isDojoMode);
+  document.getElementById('free-label').classList.toggle('active', !isDojoMode);
+  document.getElementById('dojo-label').classList.toggle('active', isDojoMode);
+  renderDay(currentDay);
+}
+
+function changeDay(dir) {
+  const next = currentDay + dir;
+  if (next < 1 || next > 28) return;
+  currentDay = next;
+  renderDay(currentDay);
+  updateWeekNav();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function jumpToWeek(w) {
+  currentDay = (w - 1) * 7 + 1;
+  renderDay(currentDay);
+  updateWeekNav();
+  window.scrollTo({ top: 120, behavior: 'smooth' });
+}
+
+function updateWeekNav() {
+  const pills = document.querySelectorAll('.week-pill');
+  const wi = getWeekIndex(currentDay);
+  pills.forEach((p, i) => p.classList.toggle('active', i === wi));
+}
+
+function toggleCheckin(day, type) {
+  const key = day + '_' + type;
+  checkins[key] = !checkins[key];
+  localStorage.setItem('mer_checkins', JSON.stringify(checkins));
+  renderDay(day);
+  renderGrid();
+}
+
+function renderDay(day) {
+  const d = days[day - 1];
+  const wi = getWeekIndex(day);
+  const w = weeks[wi];
+  const morningDone = checkins[day + '_morning'];
+  const eveningDone = checkins[day + '_evening'];
+
+  document.getElementById('day-number').textContent = 'Day ' + day;
+  document.getElementById('day-week-label').textContent = 'Week ' + (wi + 1) + ' · ' + w.title;
+  document.getElementById('week-theme-display').innerHTML =
+    '<div class="week-theme-title">Week ' + (wi+1) + ': ' + w.title + '</div>' +
+    '<div class="week-theme-sub">' + w.sub + '</div>';
+
+  document.getElementById('prev-btn').disabled = day === 1;
+  document.getElementById('next-btn').disabled = day === 28;
+
+  let html = '';
+
+  html += '<div class="prompt-block">';
+  html += '<div class="prompt-header"><div class="prompt-dot morning"></div><div class="prompt-type morning">Morning Intention</div></div>';
+  html += '<div class="prompt-body">';
+  html += '<div class="prompt-question">' + d.morning + '</div>';
+  html += '<div class="checkin-row">';
+  html += '<button class="checkin-btn' + (morningDone ? ' done' : '') + '" onclick="toggleCheckin(' + day + ',\'morning\')">';
+  html += '<div class="check-mark"></div>' + (morningDone ? 'Morning done' : 'Mark morning done');
+  html += '</button></div>';
+  html += '</div></div>';
+
+  html += '<div class="prompt-block">';
+  html += '<div class="prompt-header"><div class="prompt-dot evening"></div><div class="prompt-type evening">Evening Reflection</div></div>';
+  html += '<div class="prompt-body">';
+  html += '<div class="prompt-question">' + d.evening + '</div>';
+  html += '<div class="checkin-row">';
+  html += '<button class="checkin-btn' + (eveningDone ? ' done' : '') + '" onclick="toggleCheckin(' + day + ',\'evening\')">';
+  html += '<div class="check-mark"></div>' + (eveningDone ? 'Evening done' : 'Mark evening done');
+  html += '</button></div>';
+  html += '</div></div>';
+
+  if (isDojoMode) {
+    html += '<div class="prompt-block dojo-block">';
+    html += '<div class="prompt-header"><div class="prompt-dot dojo"></div><div class="prompt-type dojo">The Somatic Layer</div></div>';
+    html += '<div class="prompt-body"><div class="dojo-text">' + d.dojo + '</div></div>';
+    html += '</div>';
+  }
+
+  document.getElementById('day-card').innerHTML = html;
+  renderGrid();
+}
+
+function renderGrid() {
+  const grid = document.getElementById('day-grid');
+  let html = '';
+  for (let i = 1; i <= 28; i++) {
+    const morningDone = checkins[i + '_morning'];
+    const eveningDone = checkins[i + '_evening'];
+    const done = morningDone && eveningDone;
+    const isCurrent = i === currentDay;
+    let cls = 'day-dot';
+    if (done) cls += ' completed';
+    else if (isCurrent) cls += ' today';
+    html += '<div class="' + cls + '" onclick="selectDay(' + i + ')" title="Day ' + i + '">' + i + '</div>';
+  }
+  grid.innerHTML = html;
+}
+
+function selectDay(d) {
+  currentDay = d;
+  renderDay(d);
+  updateWeekNav();
+  window.scrollTo({ top: 120, behavior: 'smooth' });
+}
+
+function resetProgress() {
+  if (confirm('This will clear all your check-ins and start you back at Day 1. Are you ready to begin again?')) {
+    localStorage.removeItem('mer_checkins');
+    location.reload();
+  }
+}
+
+currentDay = 1;
+renderDay(currentDay);
+updateWeekNav();
+</script>
+</body>
+</html>
